@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<#scene> rdf:type rdfs:Resource .
+<#containedIn> rdf:type rdfs:Property .
+
+<#aboveHorizon>
+	rdf:type rdfs:Resource ;
+	<#containedIn> <#scene> .
+
+<#belowHorizon>
+	rdf:type rdfs:Resource ;
+	<#containedIn> <#scene> .
+
+<#mountain>
+	rdf:type rdfs:Resource ;
+	<#containedIn> <#aboveHorizon> .
+
+<#bird>
+	rdf:type rdfs:Resource ;
+	<#containedIn> <#aboveHorizon> .
+
+<#sun>
+	rdf:type rdfs:Resource ;
+	<#containedIn> <#aboveHorizon> .
+
+<#tree>
+	rdf:type rdfs:Resource ;
+	<#containedIn> <#aboveHorizon> .
+
+<#river>
+	rdf:type rdfs:Resource ;
+	<#containedIn> <#belowHorizon> .
+
+<#land>
+	<#containedIn> <#belowHorizon> .
+
+<#boat>
+	rdf:type rdfs:Resource ;
+	<#containedIn> <#river> .
+
+<#house>
+	rdf:type rdfs:Resource ;
+	<#containedIn> <#land> .
